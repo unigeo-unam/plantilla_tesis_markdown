@@ -150,16 +150,16 @@ Las nuevas fuentes bibliográficas se agregan en *capitulos/bibliografia.bib* em
 	- Visual Studio Code, [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)
 	- Haroopad, [http://pad.haroopress.com/user.html](http://pad.haroopress.com/user.html)
 - Gestores de Biblografía en Bibtex:
-	- Jabref, [http://www.jabref.org/] (http://www.jabref.org/)
+	- Jabref, [http://www.jabref.org/](http://www.jabref.org/)
 	- Mendeley, [https://www.mendeley.com/](https://www.mendeley.com/)
 	- Zotero,  [https://www.zotero.org/](https://www.zotero.org/)
 	
 ## Referencias
-- Fault Tolerant Systems Research Group (2015). Thesis-template-markdown. Lugar de publicación: Github. Recuperado de: [https://github.com/FTSRG/thesis-template-markdown](https://github.com/FTSRG/thesis-template-markdown)
-- Pollard, T. (2015).Template for writing a PhD thesis in Markdown. Lugar de publicación: Github. Recuperado de: [https://github.com/tompollard/phd_thesis_markdown](https://github.com/tompollard/phd_thesis_markdown)
-- Velázquez, J. (2014). Tesis UNAM. Lugar de publicación: Github. Recuperado de: [https://github.com/Tepexic/Tesis-UNAM](https://github.com/Tepexic/Tesis-UNAM)
-- Ramírez-Fernández, L.O. (2016), Plantilla de Tesis en texto plano con Markdown, para el Posgrado de Ciencias de la Administración. Lugar de publicación: Github. Recuperado de: [https://github.com/opengraphix/plantilla_tesis_md](https://github.com/opengraphix/plantilla_tesis_md)
-- Hearly, K (2014). Plain text, papers, pandoc. Recuperado de: [https://kieranhealy.org/blog/archives/2014/01/23/plain-text/](https://kieranhealy.org/blog/archives/2014/01/23/plain-text/)
+- Fault Tolerant Systems Research Group (2015). *Thesis-template-markdown*. Lugar de publicación: Github. Recuperado de: [https://github.com/FTSRG/thesis-template-markdown](https://github.com/FTSRG/thesis-template-markdown)
+- Pollard, T. (2015). *Template for writing a PhD thesis in Markdown* . Lugar de publicación: Github. Recuperado de: [https://github.com/tompollard/phd_thesis_markdown](https://github.com/tompollard/phd_thesis_markdown)
+- Velázquez, J. (2014). *Tesis UNAM*. Lugar de publicación: Github. Recuperado de: [https://github.com/Tepexic/Tesis-UNAM](https://github.com/Tepexic/Tesis-UNAM)
+- Ramírez-Fernández, L.O. (2016). *Plantilla de Tesis en texto plano con Markdown, para el Posgrado de Ciencias de la Administración*. Lugar de publicación: Github. Recuperado de: [https://github.com/opengraphix/plantilla_tesis_md](https://github.com/opengraphix/plantilla_tesis_md)
+- Hearly, K (2014). *Plain text, papers, pandoc*. Recuperado de: [https://kieranhealy.org/blog/archives/2014/01/23/plain-text/](https://kieranhealy.org/blog/archives/2014/01/23/plain-text/)
 - Pandoc. Recuperado de: [http://www.pandoc.org/](http://www.pandoc.org/)
 - Spacemacs. Recuperado de: [http://spacemacs.org/](http://spacemacs.org/)
 - Mendeley. Recuperado de: [https://www.mendeley.com/](https://www.mendeley.com/)
