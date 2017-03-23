@@ -1,0 +1,246 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Plantilla para elaborar tesis y tareas en Markdown
+%%% Título: Tesis para el Posgrado en Ciencias de la Administración, UNAM
+%%% Autor: Luis O. Ramírez Fernández < lramirez88mx@comunidad.unam.mx>
+%%% Fecha: 18 de marzo de 2016
+%%% La vesión más reciente en https://github.com/opengraphix/plantilla_tesis_md
+%%% Esta plantilla esta inspirada en los siguientes trabajo para elaborar tesis.
+%%% - Jesús Velázquez & Marco Ruiz. 2012. Tesis FI UNAM. https://github.com/Tepexic/Tesis-FI-UNAM
+%%% - Tom Pollard. 2015, febrero 2. Template for writing a PhD thesis in Markdown. https://github.com/tompollard/phd_thesis_markdown
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper, 12pt, spanish, twoside]{book}
+
+%Paquetes
+% Typografia
+%\usepackage{fontspec}
+%%\usepackage{charter} %% Charter
+%%\renewcommand{\familydefault}{bch}
+%\usepackage{avant} %% Avant Grade
+%\renewcommand{\familydefault}{pag}
+%\usepackage{palatino} %% Palatino
+%\renewcommand{\familydefault}{ppl}
+%\usepackage{helvet} %% Helvetica
+%\renewcommand{\familydefault}{phv}
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{ebgaramond}
+%\usepackage[ttscale=0.85]{libertine} %% Fuente Libertine Linux
+\usepackage[proportional]{libertine} %% Fuente Libertine Linux
+\usepackage{lettrine}
+\renewcommand{\ttfamily}{\fontencoding{OT1}\fontfamily{cmtt}\selectfont}
+
+\usepackage{cite} %Referenciar citas en biblitex
+\usepackage[natbibapa]{apacite}
+\usepackage{hyperref}
+%% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+%\usepackage{enumerate}
+%% Esto es para que LaTeX sepa que el texto está en español
+\usepackage[spanish,activeacute, es-tabla]{babel}
+\usepackage[spanish]{babelbib}
+%% Citas
+\usepackage{upquote}
+\usepackage{microtype}
+% Tablas
+\usepackage{longtable,booktabs}
+\usepackage{grffile}
+%% Para matemáticas
+\usepackage{amsmath, amssymb, mathtools}
+%% Parametros para margenes del documento
+%%\usepackage[right=2.5cm,left=2.5cm,top=2.5cm,bottom=3cm,headsep=1cm,footskip=1cm]{geometry}
+%%\usepackage[top=1.5in,bottom=1.5in,left=1.5in,right=1.4in]{geometry}
+%%\geometry{top=40mm,bottom=33mm,inner=40mm,outer=25mm}
+\usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+%\setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
+\renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
+%\usepackage{setspace}
+%\onehalfspacing
+%\raggedbottom
+\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+
+$if(numbersections)$
+$else$
+\setcounter{secnumdepth}{3}
+$endif$
+
+$if(verbatim-in-note)$
+\VerbatimFootnotes % Notas de pie
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(title)$
+\title{$title$}
+$endif$
+
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$endif$
+% Listas y viñetas:
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+$if(listings)$
+\usepackage{listings}
+$endif$
+% Viñetas enumeras:
+$if(fancy-enums)$
+\makeatletter\AtBeginDocument{%
+  \renewcommand{\@listi}
+    {\setlength{\labelwidth}{4em}}
+}\makeatother
+\usepackage{enumerate}
+$endif$
+
+$if(tables)$
+\usepackage{ctable}
+\usepackage{float} % Provee la opción H flotantes de los elementos
+$endif$
+% Sintaxis resaltada de cófigo
+$if(highlighting-macros)$
+  $highlighting-macros$
+$endif$
+$if(tables)$
+\usepackage{array}
+% This is needed because raggedright in table elements redefines \\:
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+$endif$
+$if(links)$
+\usepackage[breaklinks=true]{hyperref}
+$endif$
+$if(url)$
+\usepackage{url}
+$endif$
+$if(graphics)$
+\usepackage{graphicx}
+$endif$
+%%%------------------------------------------------------------------------
+%%% Registro de versiones con Git
+%%%------------------------------------------------------------------------
+
+%% Si no quieres usar git o el paquete vc (desde CTAN), comenta la línea correspondientes.
+%% Si comentas, debes estar seguro de comentar toda la sección
+\immediate\write18{sh ./vc.sh}
+\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Definiendo la configuración del encabezado
+%%%------------------------------------------------------------------------
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\thechapter. #1 }}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+%\fancyhead[RO]{\bfseries\rightmark}
+%\fancyhead[LE]{\bfseries\leftmark}
+\fancyhead[RO]{\bfseries\rightmark}
+\fancyhead[LE]{\bfseries\leftmark}
+\fancyfoot[C]{\thepage}
+%\fancyfoot[C]{revisión~\GITAbrHash}
+%\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.1pt}
+
+\addtolength{\headheight}{0.5pt}
+\fancypagestyle{plain}{
+  \fancyhead{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+%%%------------------------------------------------------------------------
+%%% Definiento la numeración
+%%%------------------------------------------------------------------------
+{\newpage\renewcommand{\thepage}{\arabic{page}}\setcounter{page}{1}}
+
+%%%------------------------------------------------------------------------
+%%% Configuración de estilo de encabezados de capítulos
+%%%------------------------------------------------------------------------
+% Ver en: http://aristarco.com.es/recetario-latex/trucos-y-consejos/cambiar-titulos-partes-capitulos
+
+\usepackage{titlesec}
+\newcommand{\bigrule}{\titlerule[0.5mm]}
+\titleformat{\chapter}[display] % CAMBIAMOS EL FORMATO DE LOS CAPÍTULOS
+{\bfseries\Huge} % por defecto se usarán caracteres de tamaño \Huge en negrita
+{% contenido de la etiqueta
+\titlerule % línea horizontal
+\filleft % texto alineado a la derecha
+\Large\chaptertitlename\ % "Capítulo" o "Apéndice" en tamaño \Large en lugar de \Huge
+\Large\thechapter} % número de capítulo en tamaño \Large
+{0mm} % espacio mínimo entre etiqueta y cuerpo
+{\filleft} % texto del cuerpo alineado a la derecha
+[\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
+
+%%%------------------------------------------------------------------------
+%%% Tablas
+%%%------------------------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{array}
+\newcolumntype{x}[1]{%
+>{\centering\arraybackslash}m{#1}}%
+
+%%%------------------------------------------------------------------------
+%%% Cuerpo del Documento
+%%%------------------------------------------------------------------------
+
+\begin{document}
+%%  $if(title)$
+%%  \maketitle
+%%  $endif$
+
+  $if(alignment)$
+  \begin{$alignment$}
+  $endif$
+
+  $for(include-before)$
+  $include-before$
+
+  $endfor$
+  $if(toc)$
+  {
+  \hypersetup{linkcolor=black}
+  \setcounter{tocdepth}{$toc-depth$}
+  \tableofcontents
+  }
+  $endif$
+  $if(lot)$
+  \listoftables
+  $endif$
+  $if(lof)$
+  \listoffigures
+  $endif$
+
+  $body$
+
+  $if(natbib)$
+  $if(biblio-files)$
+  $if(biblio-title)$
+  $if(book-class)$
+  \renewcommand\bibname{Bibliography}
+  $else$
+  \renewcommand\refname{References}
+  $endif$
+  $endif$
+  \bibliography{$biblio-files$}
+  $endif$
+  $endif$
+
+  $if(biblatex)$
+  \printbibliography$if(biblio-title)$[title=Referencias]$endif$
+  $endif$
+
+  $for(include-after)$
+  $include-after$
+  $endfor$
+
+  $if(alignment)$
+  \end{$alignment$}
+  $endif$
+
+\end{document}
