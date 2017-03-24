@@ -1,1 +1,3 @@
 \listoftables
+\newpage
+\pagenumbering{arabic}

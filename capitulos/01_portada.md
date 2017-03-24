@@ -60,3 +60,4 @@ bibliography: bibliografia.bib
     \end{flushright}
 
 \end{titlepage}
+\pagenumbering{Roman}

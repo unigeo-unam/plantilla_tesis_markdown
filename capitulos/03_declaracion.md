@@ -1,5 +1,6 @@
 <!-- This page is for an official declaration. -->
 
+<!--# Declaración de autenticidad {.unnumbered}-->
 
 \vspace*{\fill}
 \noindent
