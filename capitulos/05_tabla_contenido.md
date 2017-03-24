@@ -1,4 +1,4 @@
 \tableofcontents
 \begin{flushright}
-   revisión~\GITAbrHash
+  \texttt{\footnotesize revisión: \VCRevision\ el \VCDateTEX}
 \end{flushright}

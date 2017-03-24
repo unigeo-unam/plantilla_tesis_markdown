@@ -56,7 +56,7 @@ bibliography: bibliografia.bib
     \end{center}
 
     \begin{flushright}
-       revisión~\GITAbrHash
+      \texttt{\footnotesize revisión: \VCRevision\ el \VCDateTEX}
     \end{flushright}
 
 \end{titlepage}
