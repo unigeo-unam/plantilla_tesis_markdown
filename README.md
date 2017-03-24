@@ -63,7 +63,7 @@ apt-get install texlive-full
 
 ### Instalar pandoc
 ```bash
-apt-get install pandoc pandoc-citeproc pandoc-crossref pandoc-citeproc-preamble
+apt-get install pandoc pandoc-citeproc 
 ```
 
 ### Install Emacs + spacemacs
